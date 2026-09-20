@@ -23,7 +23,7 @@
     <div>
       <span class="eyebrow">Separación</span>
       <h2>Asegura tu lugar en <em>Casa Alameda.</em></h2>
-      <p class="lead">Con el pago de separación reservas tu participación mientras revisas y firmas la documentación. El pago se procesa de forma segura a través de Wompi (Bancolombia): tarjetas, PSE, Nequi y más.</p>
+      <p class="lead">Primero crea tu cuenta en el portal del inversionista: ahí verás tu plan de pagos y los recordatorios de cada cuota. Con el pago de separación reservas tu participación mientras revisas y firmas la documentación. El pago se procesa de forma segura a través de Wompi (Bancolombia): tarjetas, PSE, Nequi y más.</p>
       <ol class="steps" style="padding:0;grid-template-columns:1fr 1fr;margin-top:40px">
         <li><h3>Paga la separación</h3><p>Serás redirigido a la pasarela segura de Wompi.</p></li>
         <li><h3>Te contactamos</h3><p>Confirmamos tu reserva y te enviamos los documentos.</p></li>
@@ -39,8 +39,9 @@
         <dt>Valor por participación</dt><dd data-cfg="valorParticipacion"></dd>
         <dt>Valor de la separación</dt><dd data-cfg="valorSeparacion"></dd>
       </dl>
+      <a class="btn btn-primary" data-portal href="#" target="_blank" rel="noopener" style="margin-bottom:14px">1 · Crear mi cuenta de inversionista</a>
       <label class="check" style="margin-bottom:18px"><input type="checkbox" id="ok"> Entiendo que la separación reserva mi participación y que toda inversión implica riesgos; las rentabilidades son estimadas y no garantizadas.</label>
-      <a class="btn btn-primary" id="pay" href="#">Pagar separación con Wompi</a>
+      <a class="btn btn-ghost btn-dark" id="pay" href="#">2 · Pagar separación con Wompi</a>
       <div class="wompi-note">🔒 Pago seguro procesado por Wompi</div>
       <div class="msg" id="payMsg" style="margin-top:16px"></div>
     </aside>
@@ -65,5 +66,6 @@ document.getElementById('pay').addEventListener('click',e=>{
   location.href = C.wompiLink;
 });
 </script>
+<script type="module" src="site.js"></script>
 </body>
 </html>

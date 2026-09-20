@@ -144,8 +144,8 @@
 
     <ol class="steps reveal" style="padding:0;margin-top:80px">
       <li><h3>Infórmate</h3><p>Déjanos tus datos y recibe el dossier con cifras, planos y estructura legal.</p></li>
-      <li><h3>Separa</h3><p>Asegura tu participación con un pago de separación seguro vía Wompi.</p></li>
-      <li><h3>Formaliza</h3><p>Firma de documentos y aportes según el cronograma del proyecto.</p></li>
+      <li><h3>Crea tu cuenta y separa</h3><p>Regístrate en el portal del inversionista y separa con un pago seguro vía Wompi.</p></li>
+      <li><h3>Sigue tu plan</h3><p>Firma, consulta tu plan de pagos y recibe recordatorios antes de cada cuota.</p></li>
       <li><h3>Recibe</h3><p>La casa opera y recibes tu parte de los ingresos periódicamente.</p></li>
     </ol>
   </div>
@@ -199,34 +199,6 @@
 <div class="lightbox" id="lb"><img alt=""></div>
 
 <script src="config.js"></script>
-<script>
-const C = window.ALAMEDA || {};
-// Cifras desde config.js
-document.querySelectorAll('[data-cfg]').forEach(el=>{
-  const v = C[el.dataset.cfg];
-  if(v==null||v===''){el.textContent='Por definir';el.classList.add('tbd');} else el.textContent=v;
-});
-// Nav
-const nav=document.getElementById('nav');
-const onS=()=>nav.classList.toggle('solid',scrollY>60); onS(); addEventListener('scroll',onS,{passive:true});
-// Reveal
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-// Lightbox
-const lb=document.getElementById('lb');
-document.querySelectorAll('.gallery img').forEach(i=>i.parentElement.onclick=()=>{lb.firstElementChild.src=i.src;lb.classList.add('on');});
-lb.onclick=()=>lb.classList.remove('on');
-addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on');});
-// Formulario "Obtener más información" -> WhatsApp o correo
-document.getElementById('infoForm').addEventListener('submit',e=>{
-  e.preventDefault();
-  const d=Object.fromEntries(new FormData(e.target));
-  const txt=`Hola, quiero más información sobre ${C.nombre||'Casa Alameda'}.\nNombre: ${d.nombre}\nCelular: ${d.celular}\nCorreo: ${d.correo}\nInterés: ${d.monto}${d.mensaje?`\nMensaje: ${d.mensaje}`:''}`;
-  const msg=document.getElementById('formMsg'); msg.classList.add('on');
-  if(C.whatsapp){ window.open(`https://wa.me/${C.whatsapp}?text=${encodeURIComponent(txt)}`,'_blank'); msg.textContent='Te abrimos WhatsApp para enviar tu solicitud. ¡Gracias!'; }
-  else if(C.email){ location.href=`mailto:${C.email}?subject=${encodeURIComponent('Información '+(C.nombre||'Casa Alameda'))}&body=${encodeURIComponent(txt)}`; msg.textContent='Abrimos tu correo para enviar la solicitud. ¡Gracias!'; }
-  else msg.textContent='Falta configurar el WhatsApp o correo de contacto en config.js.';
-});
-</script>
+<script type="module" src="site.js"></script>
 </body>
 </html>
