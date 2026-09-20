@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Separa tu participación · Casa Alameda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav solid">
+  <div class="wrap">
+    <a class="brand" href="index.html">Casa <span>Alameda</span></a>
+    <a class="btn btn-dark btn-ghost" href="index.html#contacto">Obtener más información</a>
+  </div>
+</header>
+
+<main class="checkout">
+  <div class="wrap split" style="align-items:start">
+    <div>
+      <span class="eyebrow">Separación</span>
+      <h2>Asegura tu lugar en <em>Casa Alameda.</em></h2>
+      <p class="lead">Con el pago de separación reservas tu participación mientras revisas y firmas la documentación. El pago se procesa de forma segura a través de Wompi (Bancolombia): tarjetas, PSE, Nequi y más.</p>
+      <ol class="steps" style="padding:0;grid-template-columns:1fr 1fr;margin-top:40px">
+        <li><h3>Paga la separación</h3><p>Serás redirigido a la pasarela segura de Wompi.</p></li>
+        <li><h3>Te contactamos</h3><p>Confirmamos tu reserva y te enviamos los documentos.</p></li>
+      </ol>
+      <div class="frame wide" style="margin-top:40px"><img src="assets/fachada-3.jpg" alt="Fachada Casa Alameda"></div>
+    </div>
+
+    <aside class="summary">
+      <h3 style="font-size:1.9rem">Resumen</h3>
+      <dl>
+        <dt>Proyecto</dt><dd>Casa Alameda · Cali</dd>
+        <dt>Producto</dt><dd>6 aptos. tipo hotel</dd>
+        <dt>Valor por participación</dt><dd data-cfg="valorParticipacion"></dd>
+        <dt>Valor de la separación</dt><dd data-cfg="valorSeparacion"></dd>
+      </dl>
+      <label class="check" style="margin-bottom:18px"><input type="checkbox" id="ok"> Entiendo que la separación reserva mi participación y que toda inversión implica riesgos; las rentabilidades son estimadas y no garantizadas.</label>
+      <a class="btn btn-primary" id="pay" href="#">Pagar separación con Wompi</a>
+      <div class="wompi-note">🔒 Pago seguro procesado por Wompi</div>
+      <div class="msg" id="payMsg" style="margin-top:16px"></div>
+    </aside>
+  </div>
+</main>
+
+<footer style="margin-top:90px">
+  <div class="wrap">
+    <p>Aviso: esta página es informativa y no constituye oferta pública de valores ni asesoría financiera. Las condiciones de la separación y su devolución se rigen por el documento de reserva que recibirás.</p>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script>
+const C = window.ALAMEDA || {};
+document.querySelectorAll('[data-cfg]').forEach(el=>{ el.textContent = C[el.dataset.cfg] ?? 'Por definir'; });
+document.getElementById('pay').addEventListener('click',e=>{
+  e.preventDefault();
+  const msg=document.getElementById('payMsg'); msg.classList.add('on');
+  if(!document.getElementById('ok').checked){ msg.textContent='Marca la casilla para continuar.'; return; }
+  if(!C.wompiLink){ msg.textContent='Falta configurar el link de pago de Wompi en config.js (wompiLink).'; return; }
+  location.href = C.wompiLink;
+});
+</script>
+</body>
+</html>
