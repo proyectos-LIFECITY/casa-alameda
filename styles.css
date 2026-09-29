@@ -179,3 +179,6 @@ body{padding-bottom:0}footer{padding-bottom:110px}
 /* Plano técnico + modelo 3D */
 .plano{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px;margin-top:40px}.plano figure{background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px;cursor:zoom-in}.plano img{width:100%}
 .plano figcaption{font-size:.8rem;color:var(--muted);padding:6px 4px 2px}
+
+/* Flujo de recursos */
+.flujo{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);border-radius:8px;font-size:.95rem}.flujo th,.flujo td{padding:14px 18px;border-bottom:1px solid var(--line);text-align:left}.flujo th{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}.flujo .num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.flujo tr.sub td{background:#eef3ea}

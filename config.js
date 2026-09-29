@@ -18,11 +18,11 @@ window.ALAMEDA = {
   valorSeparacion: null,       // ej: "$2.000.000 COP"
 
   // --- Cifras de la inversión ---
-  inversionTotal: null,        // compra + remodelación + dotación, ej: "$1.200.000.000 COP"
-  valorCompra: null,
-  valorRemodelacion: null,
-  numeroParticipaciones: null, // ej: 60
-  valorParticipacion: null,    // ej: "$20.000.000 COP"
+  inversionTotal: "$645.000.000 COP",        // compra + remodelación + dotación, ej: "$1.200.000.000 COP"
+  valorCompra: "$525.000.000 COP",
+  valorRemodelacion: "$120.000.000 COP",
+  numeroParticipaciones: 8, // ej: 60
+  valorParticipacion: "$65.000.000 COP",    // ej: "$20.000.000 COP"
   rentabilidadEstimada: null,  // ej: "12% – 15% E.A. (estimada)"
   inicioOperacion: null        // ej: "Segundo semestre 2027"
 };

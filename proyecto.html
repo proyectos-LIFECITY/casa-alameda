@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Renders y recorrido 3D · Casa Alameda</title>
+<meta name="description" content="Así quedarían las habitaciones de Casa Alameda como apartamentos tipo hotel con cocina y baño privados.">
+<meta property="og:image" content="assets/render-acceso.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.viewer{position:relative;height:min(72vh,640px);border-radius:8px;overflow:hidden;border:1px solid var(--line);background:#f3efe8;margin-top:40px}
+.viewer .tabs{position:absolute;left:14px;bottom:14px;display:flex;flex-wrap:wrap;gap:8px;z-index:2}
+.viewer .tabs button{font:600 .78rem var(--sans);letter-spacing:.06em;padding:9px 16px;border-radius:999px;border:1px solid var(--ink);background:rgba(255,253,248,.9);cursor:pointer}
+.viewer .tabs button.on{background:var(--ink);color:#fff}
+.viewer .hint{position:absolute;right:14px;top:12px;font-size:.75rem;color:var(--muted);background:rgba(255,253,248,.85);padding:6px 12px;border-radius:999px}
+.renders{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;margin-top:40px}
+.renders figure{grid-column:span 6;position:relative;border-radius:6px;overflow:hidden;cursor:zoom-in}
+.renders figure.w12{grid-column:span 12}.renders figure.w8{grid-column:span 8}.renders figure.w4{grid-column:span 4}
+.renders img{width:100%;height:100%;object-fit:cover}
+.renders figcaption{position:absolute;left:14px;bottom:12px;color:#fff;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.8)}
+@media(max-width:760px){.renders figure,.renders figure.w8,.renders figure.w4{grid-column:span 12}}
+.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:40px;padding:0;list-style:none}
+.specs li{border-top:1px solid var(--ink);padding-top:16px}.specs b{display:block;font-family:var(--serif);font-size:1.35rem;font-weight:500;margin-bottom:4px}.specs span{color:var(--muted);font-size:.93rem}
+</style>
+</head>
+<body>
+
+<header class="nav solid" id="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Casa <span>Alameda</span></a>
+    <ul>
+      <li><a href="index.html#apartamentos">Apartamentos</a></li>
+      <li><a href="#renders">Renders</a></li>
+      <li><a href="#3d">Recorrido 3D</a></li>
+      <li><a href="index.html#inversion">Inversión</a></li>
+    </ul>
+    <a class="btn btn-primary" href="invertir.html">Invertir</a>
+  </div>
+</header>
+
+<section id="concepto" style="padding-top:150px">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">El proyecto · Adecuación</span>
+      <h2>Seis habitaciones, <em>seis apartamentos tipo hotel.</em></h2>
+      <p class="lead">Cada habitación de la casa se convierte en un apartamento independiente con cocina y baño propios, sin perder lo que hace única a la casa: sus ventanas en arco, las rejas blancas y la moldura verde.</p>
+      <p>La unidad tipo, de aproximadamente 18 m², tiene cama XL con almacenamiento bajo las ventanas, nicho-sofá, cocineta lineal de 2,1 m (inducción de 2 puestos, poceta, nevera bajo mesón y microondas), mesa de trabajo para dos, Smart TV, aire acondicionado y baño privado en cápsula de vidrio con ducha tipo lluvia.</p>
+      <div class="cta" style="margin-top:28px"><button class="btn btn-primary" data-lead="Renders Alameda">Quiero el dossier</button><a class="btn btn-ghost btn-dark" href="invertir.html">Quiero invertir</a></div>
+    </div>
+    <div class="frame"><img src="assets/render-acceso.jpg" alt="Render conceptual de la habitación con cocina y baño"></div>
+  </div>
+</section>
+
+<section id="renders" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">Renders conceptuales</span>
+    <h2>Así quedaría <em>cada habitación.</em></h2>
+    <div class="renders">
+      <figure class="w12"><img src="assets/render-acceso.jpg" alt="Vista desde el acceso" loading="lazy"><figcaption>Desde el acceso: baño en cápsula, cocineta y cama bajo los arcos</figcaption></figure>
+      <figure><img src="assets/render-cocina.jpg" alt="Cocineta y baño" loading="lazy"><figcaption>Cocineta lineal y baño</figcaption></figure>
+      <figure><img src="assets/render-cama.jpg" alt="Desde la cama" loading="lazy"><figcaption>Desde la cama: mesa, TV y baño</figcaption></figure>
+      <figure class="w8"><img src="assets/render-axo.jpg" alt="Axonometría" loading="lazy"><figcaption style="color:var(--ink);text-shadow:none">Axonometría de la unidad tipo</figcaption></figure>
+      <figure class="w4"><img src="assets/render-planta.jpg" alt="Planta" loading="lazy"><figcaption style="color:var(--ink);text-shadow:none">Planta</figcaption></figure>
+    </div>
+    <ul class="specs">
+      <li><b>Cocineta completa</b><span>Inducción de 2 puestos, poceta, nevera bajo mesón, microondas y alacena.</span></li>
+      <li><b>Baño privado</b><span>Cápsula de vidrio esmerilado, ducha tipo lluvia, sanitario y lavamanos con espejo iluminado.</span></li>
+      <li><b>Descanso</b><span>Cama XL con almacenamiento, cortina blackout y nicho-sofá junto a las ventanas.</span></li>
+      <li><b>Trabajo y confort</b><span>Mesa para dos, Smart TV, wifi y aire acondicionado.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="3d" class="contact">
+  <div class="wrap">
+    <span class="eyebrow">Recorrido 3D</span>
+    <h2>Gírala, acércate, <em>recórrela.</em></h2>
+    <div class="viewer" id="viewer">
+      <span class="hint">Arrastra para girar · rueda para acercar</span>
+      <div class="tabs" id="vtabs"><button data-v="axo" class="on">Axonometría</button><button data-v="acceso">Acceso</button><button data-v="cocina">Cocineta</button><button data-v="cama">Desde la cama</button><button data-v="planta">Planta</button></div>
+    </div>
+    <p style="font-size:.82rem;color:var(--muted);margin-top:14px;max-width:95ch">Renders y modelo conceptuales de la unidad tipo. Distribución, acabados y dimensiones son indicativos y se ajustan a cada habitación en el diseño arquitectónico definitivo.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="index.html">Casa <span>Alameda</span></a>
+    <p>Barrio Alameda · Santiago de Cali, Colombia.</p>
+    <p>Aviso: esta página es informativa y no constituye oferta pública de valores ni asesoría financiera. Toda inversión inmobiliaria implica riesgos; las rentabilidades son estimadas y no están garantizadas. Los renders son conceptuales.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lb"><img alt=""></div>
+<script src="config.js"></script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import { buildRoom } from './room3d.js';
+const el = document.getElementById('viewer'); let room;
+const io = new IntersectionObserver(es => { if (es[0].isIntersecting && !room) { room = buildRoom(el, { view: 'axo', ac: true, arco: true }); io.disconnect(); } }, { rootMargin: '300px' }); io.observe(el);
+document.getElementById('vtabs').addEventListener('click', e => { const b = e.target.closest('button'); if (!b || !room) return; room.setView(b.dataset.v); document.querySelectorAll('#vtabs button').forEach(x => x.classList.toggle('on', x === b)); });
+const lb = document.getElementById('lb');
+document.querySelectorAll('.renders img').forEach(i => i.parentElement.onclick = () => { lb.firstElementChild.src = i.src; lb.classList.add('on'); });
+lb.onclick = () => lb.classList.remove('on');
+</script>
+<script type="module" src="site.js"></script>
+</body>
+</html>
