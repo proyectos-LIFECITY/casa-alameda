@@ -23,6 +23,7 @@
       <li><a href="#apartamentos">Apartamentos</a></li>
       <li><a href="proyecto.html">Renders 3D</a></li>
       <li><a href="#galeria">Galería</a></li>
+      <li><a href="#proyeccion">Rentabilidad</a></li>
       <li><a href="#inversion">Inversión</a></li>
     </ul>
     <a class="btn btn-primary" href="invertir.html">Invertir</a>
@@ -43,7 +44,7 @@
       <div><b>6</b><small>Apartamentos</small></div>
       <div><b>2</b><small>Pisos + terraza</small></div>
       <div><b>100%</b><small>Dotados</small></div>
-      <div><b>$65 M</b><small>Por participación</small></div>
+      <div><b>$80,6 M</b><small>Por participación · 1 o 2 cuotas</small></div>
     </div>
   </div>
 </section>
@@ -72,6 +73,11 @@
       <div class="card reveal"><span class="n">dos</span><h3>Nueva Avenida Roosevelt</h3><p>Cerca del corredor cuya remodelación está proyectada: mejor espacio público, movilidad y valorización para el sector.</p></div>
       <div class="card reveal"><span class="n">tres</span><h3>Centralidad real</h3><p>Conexión rápida con San Fernando, el Parque del Perro, el centro histórico, clínicas y escenarios deportivos.</p></div>
     </div>
+    <div class="mapa-grid reveal">
+      <div id="mapa" aria-label="Mapa con la ubicación de la casa y los lugares cercanos"></div>
+      <ul id="mapa-lista"></ul>
+    </div>
+    <p style="font-size:.8rem;color:#c9d3c4;margin-top:12px">Ubicación aproximada. Distancias en línea recta; los tiempos son estimados.</p>
     <div class="split" style="margin-top:70px">
       <div class="frame wide reveal"><img src="assets/vista-balcon.jpg" alt="Vista de la calle desde el balcón" loading="lazy"></div>
       <div class="frame wide reveal"><img src="assets/vista-terraza.jpg" alt="Vista del barrio desde la terraza" loading="lazy"></div>
@@ -131,11 +137,40 @@
   </div>
 </section>
 
+<section id="proyeccion" class="market">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Rentabilidad proyectada</span>
+      <h2>Los números, <em>con los supuestos a la vista.</em></h2>
+      <p class="lead" style="margin-top:22px">Proyección a 10 años con la tarifa media de Airbnb de la zona, la mitad de las noches ocupadas y la mitad del ingreso destinada a operar la casa.</p>
+    </div>
+    <div class="figures supuestos reveal" id="p-supuestos"></div>
+    <h3 class="reveal">Resultado</h3>
+    <div class="figures reveal" id="p-kpis" style="margin-top:20px"></div>
+    <p class="lead reveal" id="p-resumen" style="margin-top:26px;max-width:80ch"></p>
+    <h3 class="reveal">Proyección a 10 años</h3>
+    <div class="scroll reveal"><table>
+      <thead><tr><th>Año</th><th class="num">Ingreso bruto</th><th class="num">Gastos de operación</th><th class="num">Ingreso neto (NOI)</th><th class="num">Neto mensual</th><th class="num">Neto por participación</th><th class="num">Rentab. sobre costo</th><th class="num">Valor de venta estimado</th></tr></thead>
+      <tbody id="p-tabla"></tbody></table></div>
+    <h3 class="reveal">¿Y si la tarifa o la ocupación son otras?</h3>
+    <div class="scroll reveal"><table>
+      <thead><tr><th>Escenario · año 1</th><th class="num">Tarifa por noche</th><th class="num">Ocupación</th><th class="num">Ingreso bruto mensual</th><th class="num">Ingreso neto mensual</th><th class="num">Neto mensual por participación</th><th class="num">Rentab. sobre costo</th><th class="num">Valor de venta · año 10</th></tr></thead>
+      <tbody id="p-escenarios"></tbody></table></div>
+    <h3 class="reveal">De dónde sale la tarifa</h3>
+    <p class="lead reveal" style="margin-top:14px;max-width:85ch">Sondeo propio en Airbnb del 29 de septiembre de 2026 sobre Alameda, San Fernando, Miraflores y los alrededores del estadio: 30 precios de apartaestudios y lofts de una habitación para 2 huéspedes. Fin de semana (16–18 de octubre): mediana de $148.329 por noche, entre $102.500 y $228.558. Entre semana (20–22 de octubre): mediana de $112.327, entre $70.000 y $175.000. La mediana combinada es $140.325, y esa es la tarifa del escenario base.</p>
+    <p class="src reveal">La mayoría de los anuncios de la muestra queda hacia San Fernando y el Parque del Perro; los más cercanos al corazón de Alameda están en la parte baja del rango ($70.000 a $130.000 por noche), así que la tarifa base puede estar por encima de lo que se logre al comienzo. Airbnb no publica el barrio exacto ni la ocupación real de cada anuncio.</p>
+    <p class="src reveal">Cómo se calcula: ingreso bruto = 6 apartamentos × tarifa por noche × 365 × ocupación. Ingreso neto (NOI) = ingreso bruto − gastos de operación. Valor de venta = ingreso neto del año ÷ tasa de capitalización. La TIR supone el costo total de <span data-m="costo"></span> al inicio, los ingresos netos de cada año y la venta al final del año 10.</p>
+    <p class="src reveal">Esto es una proyección, no una promesa. No incluye impuestos (renta, predial, IVA del servicio de alojamiento), mantenimiento mayor ni reposición de dotación, ni los meses de obra y de arranque en que la casa no produce. La tarifa sale de precios publicados en Airbnb, que incluyen la comisión que la plataforma cobra al huésped: el anfitrión recibe menos. Las estimaciones de terceros para toda Cali dan ocupaciones entre 31 % y 48 %. Toda inversión implica riesgos y las rentabilidades no están garantizadas.</p>
+    <div class="cta-block reveal"><div><h3>¿Quieres el modelo completo?</h3><p>Te enviamos el dossier con la proyección, los comparables de Airbnb y la estructura legal.</p></div><button class="btn btn-primary" data-lead="CTA rentabilidad">Quiero el dossier</button></div>
+  </div>
+</section>
+
 <section class="contact" id="inversion">
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">La inversión</span>
       <h2>Compra y remodelación, <em>en 8 participaciones.</em></h2>
+      <p class="lead" style="margin-top:22px">Cada participación vale <b data-m="aporte"></b> y se paga en una sola cuota, o en dos: <b data-m="cuota1"></b> al cierre y <b data-m="cuota2"></b> a los dos meses, cuando se paga el saldo de la casa.</p>
       <p class="lead" style="margin-top:22px">Un modelo de inversión colaborativa: varios inversionistas, un solo activo real, ingresos por rentas cortas distribuidos según tu participación.</p>
     </div>
     <div class="figures reveal">
@@ -143,7 +178,7 @@
       <div><small>Remodelación (estimada)</small><b data-cfg="valorRemodelacion"></b></div>
       <div><small>Valor por participación</small><b data-cfg="valorParticipacion"></b></div>
       <div><small>Participaciones disponibles</small><b data-cfg="numeroParticipaciones"></b></div>
-      <div><small>Rentabilidad estimada</small><b data-cfg="rentabilidadEstimada"></b></div>
+      <div><small>Rentabilidad neta estimada · año 1</small><b data-m="rent"></b></div>
       <div><small>Separación</small><b data-cfg="valorSeparacion"></b></div>
     </div>
     <h3 class="reveal" style="font-size:1.8rem;margin-top:60px">Cómo se usan los recursos</h3>
@@ -152,14 +187,15 @@
       <tbody>
         <tr><td>Al cierre</td><td>Pago inicial de la compra de la casa</td><td class="num">$400.000.000</td></tr>
         <tr><td>Al cierre</td><td>Remodelación de las 6 habitaciones con cocina y baño (estimada)</td><td class="num">$120.000.000</td></tr>
-        <tr class="sub"><td colspan="2"><b>Recaudo inmediato: 8 participaciones × $65.000.000</b></td><td class="num"><b>$520.000.000</b></td></tr>
+        <tr class="sub"><td colspan="2"><b>Primera cuota: 8 participaciones × $65.000.000</b></td><td class="num"><b>$520.000.000</b></td></tr>
         <tr><td>A los 2 meses</td><td>Saldo de la compra</td><td class="num">$125.000.000</td></tr>
+        <tr class="sub"><td colspan="2"><b>Segunda cuota: 8 participaciones × $15.625.000</b></td><td class="num"><b>$125.000.000</b></td></tr>
         <tr class="sub"><td colspan="2"><b>Costo total del proyecto (compra $525.000.000 + remodelación $120.000.000)</b></td><td class="num"><b>$645.000.000</b></td></tr>
       </tbody></table></div>
     <ul class="includes reveal" style="padding:0">
       <li><b>Compra de la casa</b>Adquisición del inmueble con estudio de títulos y certificado de tradición.</li>
       <li><b>Remodelación</b>Adecuación de las 6 habitaciones como apartamentos con cocina y baño.</li>
-      <li><b>8 participaciones</b>De $65.000.000 cada una. Los derechos de cada participación y la estructura legal se detallan en el dossier.</li>
+      <li><b>8 participaciones</b>De $80.625.000 cada una, en 1 o 2 cuotas. Los derechos de cada participación y la estructura legal se detallan en el dossier.</li>
     </ul>
 
     <ol class="steps reveal" style="padding:0;margin-top:80px">
@@ -219,6 +255,9 @@
 <div class="lightbox" id="lb"><img alt=""></div>
 
 <script src="config.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+<script type="module" src="proyeccion.js"></script>
 <script type="module" src="site.js"></script>
 </body>
 </html>

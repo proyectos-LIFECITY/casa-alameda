@@ -182,3 +182,25 @@ body{padding-bottom:0}footer{padding-bottom:110px}
 
 /* Flujo de recursos */
 .flujo{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);border-radius:8px;font-size:.95rem}.flujo th,.flujo td{padding:14px 18px;border-bottom:1px solid var(--line);text-align:left}.flujo th{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}.flujo .num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.flujo tr.sub td{background:#eef3ea}
+
+/* Mapa de distancias y proyección */
+.mapa-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(260px,1fr);gap:18px;margin-top:50px}
+#mapa{height:clamp(340px,56vh,520px);border-radius:12px;overflow:hidden;z-index:1}
+#mapa-lista{list-style:none;padding:0;display:grid;gap:10px;align-content:start}
+#mapa-lista li{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:14px 16px}
+#mapa-lista b{display:block;font-family:var(--serif);font-size:1.25rem;font-weight:500}#mapa-lista small{display:block;color:#c9d3c4;font-size:.8rem}
+#mapa-lista em{font-style:normal;text-align:right;font-size:1.15rem;font-weight:600;white-space:nowrap}
+.pin{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:#fff;font:600 14px var(--sans);border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.tip{font:500 12px var(--sans);border-radius:6px}.tip.casa{font-weight:700;background:#b5562f;color:#fff;border-color:#b5562f}.tip.casa::before{border-top-color:#b5562f}
+@media(max-width:860px){.mapa-grid{grid-template-columns:1fr}}
+.supuestos span{display:block;font-size:.8rem;color:var(--muted);margin-top:4px}
+.barcell{position:relative;min-width:150px}.barcell i{position:absolute;left:0;top:22%;bottom:22%;background:#cfe0c8;border-radius:0 4px 4px 0}.barcell span{position:relative;font-weight:600}
+
+/* Tablas de estudio / proyección */
+.market table{width:100%;border-collapse:collapse;margin-top:24px;background:var(--paper);border:1px solid var(--line);border-radius:8px;overflow:hidden;font-size:.92rem}
+.market th,.market td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
+.market th{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.market td.num,.market th.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.market tr.sub td{background:#eef3ea}.market tr.base td{background:#f6efe2;font-weight:600}
+.market .scroll{overflow-x:auto}.market h3{font-size:1.7rem;margin-top:60px}
+.market .src{font-size:.82rem;color:var(--muted);margin-top:14px;max-width:95ch}.market .src a{color:var(--green)}
