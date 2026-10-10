@@ -28,20 +28,21 @@ window.ALAMEDA = {
 
   // --- Supuestos de la proyección (edítalos y la página recalcula todo) ---
   modelo: {
-    tarifaNoche: 140325,            // COP por noche
-    tarifaFuente: "mediana de 30 precios de Airbnb en la zona (sept. 2026)",
-    ocupacion: 0.50,                // 50 % de las noches
-    gastos: 0.50,                   // 50 % del ingreso bruto
-    unidades: 6,
-    crecimiento: 0.06,              // aumento anual de tarifas
+    rentaConsultorio: 1600000,      // COP/mes por consultorio (escenario medio del estudio de mercado)
+    rentaFuente: "comparables de El Cedro y San Fernando (oct. 2026)",
+    rentaLocal: 1600000,            // COP/mes, local de ~50 m² a ~32.000/m²
+    localFuente: "≈50 m² a $32.000/m², comparables cerca de la Galería",
+    unidades: 6,                    // consultorios
+    gastos: 0.20,                   // vacancia + gastos (15–25 % según el estudio)
+    crecimiento: 0.06,              // aumento anual del arriendo
     capRate: 0.12,                  // valor = ingreso neto anual / capRate
     costoTotal: 645000000,          // compra 525 M + remodelación 120 M
     participaciones: 8,
     cuota1: 65000000,               // primera cuota; la segunda es el resto a los 2 meses
     escenarios: [
-      { nombre: "Conservador", tarifa: 112327, ocupacion: 0.35 },   // tarifa entre semana, ocupación de AirROI para Cali
-      { nombre: "Base", tarifa: 140325, ocupacion: 0.50, base: true },
-      { nombre: "Optimista", tarifa: 148329, ocupacion: 0.60 }      // tarifa de fin de semana
+      { nombre: "Conservador", rentaConsultorio: 1200000, rentaLocal: 1250000 },
+      { nombre: "Medio", rentaConsultorio: 1600000, rentaLocal: 1600000, base: true },
+      { nombre: "Optimista", rentaConsultorio: 2000000, rentaLocal: 2000000 }
     ]
   },
 
@@ -49,10 +50,13 @@ window.ALAMEDA = {
   mapa: {
     casa: [3.43328, -76.53839],
     lugares: [
-      { nombre: "Galería Alameda", nota: "Plaza de mercado y turismo gastronómico", pos: [3.434608, -76.535634] },
+      { nombre: "Galería Alameda", nota: "Plaza de mercado del barrio", pos: [3.434608, -76.535634] },
       { nombre: "Estadio Pascual Guerrero", nota: "Fútbol, conciertos y eventos", pos: [3.429911, -76.54112] },
+      { nombre: "Clínica Rey David", nota: "Clínica general · magisterio y pensionados", pos: [3.427267, -76.538518] },
+      { nombre: "Hospital Universitario del Valle", nota: "Hospital departamental · Calle 5 #36-08", pos: [3.430183, -76.54544] },
       { nombre: "Parque del Perro", nota: "Restaurantes y vida nocturna", pos: [3.435951, -76.545537] },
+      { nombre: "Clínica Imbanaco", nota: "Principal clínica privada de Cali · Cra 38A #5A-100", pos: [3.423707, -76.543989] },
       { nombre: "Arena USC", nota: "Conciertos y eventos · Universidad Santiago de Cali", pos: [3.401672, -76.547158] }
     ]
-  }        // ej: "Segundo semestre 2027"
+  }
 };

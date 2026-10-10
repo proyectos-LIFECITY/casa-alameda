@@ -40,6 +40,6 @@ document.addEventListener('submit', async e => {
     await guardarLead({ ...d, proyecto: C.nombre, origen: form.dataset.origen });
     try { sessionStorage.lcLead = 1; } catch { }
     const wa = C.whatsapp ? `<a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/${C.whatsapp}?text=${encodeURIComponent(`Hola, soy ${d.nombre}. Acabo de pedir el dossier de ${C.nombre}.`)}">Escribir por WhatsApp ahora</a>` : '';
-    form.innerHTML = `<h3>¡Listo, ${String(d.nombre).split(' ')[0].replace(/[<>&]/g, '')}!</h3><p>Recibimos tus datos. Un asesor te enviará el dossier y resolverá tus dudas muy pronto.</p>${wa}<a class="btn btn-ghost btn-dark" href="proyecto.html">Ver renders y modelo 3D</a>`;
+    form.innerHTML = `<h3>¡Listo, ${String(d.nombre).split(' ')[0].replace(/[<>&]/g, '')}!</h3><p>Recibimos tus datos. Un asesor te enviará el dossier y resolverá tus dudas muy pronto.</p>${wa}${$('a[href="proyecto.html"]') ? '<a class="btn btn-ghost btn-dark" href="proyecto.html">Ver renders y modelo 3D</a>' : $('#videos') ? '<a class="btn btn-ghost btn-dark" href="#videos">Ver los videos de la casa</a>' : ''}`;
   } catch (err) { console.error(err); msg.textContent = 'No pudimos registrar tus datos. Intenta de nuevo en un momento.'; btn.disabled = false; }
 });

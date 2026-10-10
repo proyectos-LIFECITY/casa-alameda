@@ -204,3 +204,7 @@ body{padding-bottom:0}footer{padding-bottom:110px}
 .market tr.sub td{background:#eef3ea}.market tr.base td{background:#f6efe2;font-weight:600}
 .market .scroll{overflow-x:auto}.market h3{font-size:1.7rem;margin-top:60px}
 .market .src{font-size:.82rem;color:var(--muted);margin-top:14px;max-width:95ch}.market .src a{color:var(--green)}
+
+/* Videos de YouTube */
+.videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;margin-top:40px}
+.yt{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#000}.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
