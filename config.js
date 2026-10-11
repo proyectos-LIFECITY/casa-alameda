@@ -18,11 +18,11 @@ window.ALAMEDA = {
   valorSeparacion: null,       // ej: "$2.000.000 COP"
 
   // --- Cifras de la inversión ---
-  inversionTotal: "$645.000.000 COP",        // compra + remodelación + dotación, ej: "$1.200.000.000 COP"
+  inversionTotal: null,        // compra + remodelación + dotación, ej: "$1.200.000.000 COP"
   valorCompra: "$525.000.000 COP",
-  valorRemodelacion: "$120.000.000 COP",
+  valorRemodelacion: null,         // se calcula con el presupuesto de la hoja de cálculo
   numeroParticipaciones: 8, // ej: 60
-  valorParticipacion: "$80.625.000 COP",    // ej: "$20.000.000 COP"
+  valorParticipacion: null,    // ej: "$20.000.000 COP"
   rentabilidadEstimada: null,  // ej: "12% – 15% E.A. (estimada)"
   inicioOperacion: null,
 
@@ -32,18 +32,27 @@ window.ALAMEDA = {
     rentaFuente: "comparables de El Cedro y San Fernando (oct. 2026)",
     rentaLocal: 1600000,            // COP/mes, local de ~50 m² a ~32.000/m²
     localFuente: "≈50 m² a $32.000/m², comparables cerca de la Galería",
-    unidades: 6,                    // consultorios
+    unidades: 7,                    // consultorios (6 habitaciones + la cocina)
     gastos: 0.20,                   // vacancia + gastos (15–25 % según el estudio)
     crecimiento: 0.06,              // aumento anual del arriendo
     capRate: 0.12,                  // valor = ingreso neto anual / capRate
-    costoTotal: 645000000,          // compra 525 M + remodelación 120 M
+    compra: 525000000,              // precio de la casa
+    pagoInicial: 400000000,         // al cierre; el saldo se paga a los 2 meses
+    remodelacion: 300000000,        // respaldo si no carga la hoja; el valor real sale del presupuesto
     participaciones: 8,
-    cuota1: 65000000,               // primera cuota; la segunda es el resto a los 2 meses
     escenarios: [
       { nombre: "Conservador", rentaConsultorio: 1200000, rentaLocal: 1250000 },
       { nombre: "Medio", rentaConsultorio: 1600000, rentaLocal: 1600000, base: true },
       { nombre: "Optimista", rentaConsultorio: 2000000, rentaLocal: 2000000 }
     ]
+  },
+
+  // --- Presupuesto de obra: se lee de la hoja de cálculo de Google al cargar la página ---
+  // La hoja debe estar compartida como "Cualquier persona con el enlace · Lector".
+  presupuesto: {
+    hoja: "1icBTzmMbD50_BEwftELcF9nJaJ-sR_p_CyAnMI3oxd4",
+    gid: 0,
+    respaldo: "presupuesto.json"    // se usa si la hoja no está compartida o no responde
   },
 
   // --- Mapa (ubicación aproximada de la casa y lugares cercanos) ---

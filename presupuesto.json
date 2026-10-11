@@ -1,0 +1,233 @@
+[
+ {
+  "capitulo": "1. Desmontes",
+  "item": "Desmonte de techos y cielos existentes",
+  "unidad": "m²",
+  "cantidad": 260,
+  "unitario": 18000
+ },
+ {
+  "capitulo": "1. Desmontes",
+  "item": "Desmonte de pisos existentes",
+  "unidad": "m²",
+  "cantidad": 260,
+  "unitario": 22000
+ },
+ {
+  "capitulo": "1. Desmontes",
+  "item": "Desmonte de mesones, gabinetes y enchapes de cocina",
+  "unidad": "gl",
+  "cantidad": 1,
+  "unitario": 2500000
+ },
+ {
+  "capitulo": "1. Desmontes",
+  "item": "Retiro de escombros a botadero autorizado",
+  "unidad": "m³",
+  "cantidad": 45,
+  "unitario": 95000
+ },
+ {
+  "capitulo": "1. Desmontes",
+  "item": "Protección de obra y aseo general",
+  "unidad": "gl",
+  "cantidad": 1,
+  "unitario": 3000000
+ },
+ {
+  "capitulo": "2. Pisos",
+  "item": "Alistado y nivelación de piso",
+  "unidad": "m²",
+  "cantidad": 260,
+  "unitario": 45000
+ },
+ {
+  "capitulo": "2. Pisos",
+  "item": "Porcelanato 60x60 tráfico alto, suministro e instalación",
+  "unidad": "m²",
+  "cantidad": 260,
+  "unitario": 145000
+ },
+ {
+  "capitulo": "2. Pisos",
+  "item": "Guardaescoba en porcelanato",
+  "unidad": "ml",
+  "cantidad": 190,
+  "unitario": 26000
+ },
+ {
+  "capitulo": "3. Acabado de muros",
+  "item": "Raspado de pintura y pañete deteriorado",
+  "unidad": "m²",
+  "cantidad": 720,
+  "unitario": 9000
+ },
+ {
+  "capitulo": "3. Acabado de muros",
+  "item": "Resanes y estuco",
+  "unidad": "m²",
+  "cantidad": 720,
+  "unitario": 17000
+ },
+ {
+  "capitulo": "3. Acabado de muros",
+  "item": "Pintura vinilo tipo 1, tres manos",
+  "unidad": "m²",
+  "cantidad": 720,
+  "unitario": 14000
+ },
+ {
+  "capitulo": "3. Acabado de muros",
+  "item": "Fachada: lavado, resanes y pintura",
+  "unidad": "m²",
+  "cantidad": 220,
+  "unitario": 30000
+ },
+ {
+  "capitulo": "4. Cielos en estructura liviana",
+  "item": "Cielo falso en drywall con perfilería, masilla y pintura",
+  "unidad": "m²",
+  "cantidad": 260,
+  "unitario": 98000
+ },
+ {
+  "capitulo": "4. Cielos en estructura liviana",
+  "item": "Remates, dilataciones y cortineros",
+  "unidad": "ml",
+  "cantidad": 140,
+  "unitario": 18000
+ },
+ {
+  "capitulo": "5. Eléctrico e iluminación",
+  "item": "Luminarias LED (paneles y bala) nuevas",
+  "unidad": "un",
+  "cantidad": 72,
+  "unitario": 185000
+ },
+ {
+  "capitulo": "5. Eléctrico e iluminación",
+  "item": "Salidas de iluminación conectadas a la red existente",
+  "unidad": "un",
+  "cantidad": 72,
+  "unitario": 95000
+ },
+ {
+  "capitulo": "5. Eléctrico e iluminación",
+  "item": "Tomas dobles nuevas en consultorios y local",
+  "unidad": "un",
+  "cantidad": 40,
+  "unitario": 85000
+ },
+ {
+  "capitulo": "5. Eléctrico e iluminación",
+  "item": "Tablero de distribución y protecciones",
+  "unidad": "gl",
+  "cantidad": 1,
+  "unitario": 4500000
+ },
+ {
+  "capitulo": "5. Eléctrico e iluminación",
+  "item": "Certificación RETIE de la instalación",
+  "unidad": "gl",
+  "cantidad": 1,
+  "unitario": 3500000
+ },
+ {
+  "capitulo": "6. Consultorios",
+  "item": "Divisiones en drywall entre consultorios",
+  "unidad": "m²",
+  "cantidad": 120,
+  "unitario": 125000
+ },
+ {
+  "capitulo": "6. Consultorios",
+  "item": "Lavamanos con punto hidrosanitario por consultorio",
+  "unidad": "un",
+  "cantidad": 7,
+  "unitario": 1400000
+ },
+ {
+  "capitulo": "6. Consultorios",
+  "item": "Puertas de consultorio con cerradura",
+  "unidad": "un",
+  "cantidad": 7,
+  "unitario": 850000
+ },
+ {
+  "capitulo": "6. Consultorios",
+  "item": "Adecuación de baño accesible",
+  "unidad": "gl",
+  "cantidad": 1,
+  "unitario": 9000000
+ },
+ {
+  "capitulo": "7. Cocina como consultorio y cocineta",
+  "item": "Adecuación de la cocina como consultorio adicional",
+  "unidad": "gl",
+  "cantidad": 1,
+  "unitario": 6000000
+ },
+ {
+  "capitulo": "7. Cocina como consultorio y cocineta",
+  "item": "Cocineta pequeña en el segundo piso (mueble, mesón, poceta y puntos)",
+  "unidad": "gl",
+  "cantidad": 1,
+  "unitario": 8500000
+ },
+ {
+  "capitulo": "8. Parqueadero y garaje",
+  "item": "Desmonte de rejas del antejardín",
+  "unidad": "ml",
+  "cantidad": 22,
+  "unitario": 60000
+ },
+ {
+  "capitulo": "8. Parqueadero y garaje",
+  "item": "Piso de parqueadero en adoquín o concreto",
+  "unidad": "m²",
+  "cantidad": 60,
+  "unitario": 120000
+ },
+ {
+  "capitulo": "8. Parqueadero y garaje",
+  "item": "Fachada del local en vidrio templado y aluminio",
+  "unidad": "m²",
+  "cantidad": 12,
+  "unitario": 650000
+ },
+ {
+  "capitulo": "8. Parqueadero y garaje",
+  "item": "Adecuación interior del garaje como local (piso, muros, eléctrico)",
+  "unidad": "gl",
+  "cantidad": 1,
+  "unitario": 8000000
+ },
+ {
+  "capitulo": "9. Licencias, estudios y diseños",
+  "item": "Licencia de construcción (adecuación) y expensas de curaduría",
+  "unidad": "gl",
+  "cantidad": 1,
+  "unitario": 6000000
+ },
+ {
+  "capitulo": "9. Licencias, estudios y diseños",
+  "item": "Estudio de vulnerabilidad sísmica",
+  "unidad": "gl",
+  "cantidad": 1,
+  "unitario": 9000000
+ },
+ {
+  "capitulo": "9. Licencias, estudios y diseños",
+  "item": "Diseño arquitectónico y técnico",
+  "unidad": "gl",
+  "cantidad": 1,
+  "unitario": 10000000
+ },
+ {
+  "capitulo": "10. Administración e imprevistos",
+  "item": "Imprevistos sobre el costo directo",
+  "unidad": "%",
+  "cantidad": 10,
+  "unitario": 0
+ }
+]
